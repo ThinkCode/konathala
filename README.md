@@ -1,1 +1,1 @@
-# konathala
+# konathala.com
