@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~konathala.com: Money-Saving Tech</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      text-align: left;
+      line-height: 1.4;
+    }
+    header {
+      background-color: #2e2e2e;
+      padding: 20px;
+      border-bottom: 2px solid #00ff00;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin: 0;
+      color: #00ff00;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    p {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .product-card {
+      background: #2e2e2e;
+      border: 1px solid #00ff00;
+      padding: 15px;
+      transition: background-color 0.3s;
+    }
+    .product-card:hover {
+      background-color: #3c3c3c;
+    }
+    .product-card h3 {
+      font-size: 1.2em;
+      margin: 0 0 5px;
+      color: #00ff00;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00ff00;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-size: 1em;
+      margin: 10px 5px 10px 0;
+      border: 1px solid #00ff00;
+      transition: color 0.3s, background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #1a1a1a;
+      color: #00ff00;
+    }
+    .social-links a {
+      color: #00ff00;
+      text-decoration: none;
+      margin: 0 15px 0 0;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: #99ff99;
+    }
+    footer {
+      background-color: #2e2e2e;
+      color: #ffffff;
+      padding: 15px;
+      border-top: 2px solid #00ff00;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .prompt::before {
+      content: "$ ";
+      color: #00ff00;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+      }
+      p, .cta-button, .social-links a {
+        font-size: 0.9em;
+      }
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>~konathala.com$ whoami</h1>
+  </header>
+  <div class="container">
+    <p class="prompt">whoami: Kiran, passionate about coding money-saving tools.</p>
+    <p class="prompt">cat mission.txt: Crafting sleek, terminal-friendly apps to keep your wallet full.</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>budget_buddy.sh</h3>
+        <p>Track expenses, boost savings. Run: ./maximize_cashflow.sh</p>
+      </div>
+      <div class="product-card">
+        <h3>deal_finder.sh</h3>
+        <p>Real-time deal alerts. Run: ./price_searchr.sh</p>
+      </div>
+      <div class="product-card">
+        <h3>creditcard_saver.sh</h3>
+        <p>Maximize your daily spend with cash back. Run: ./cashback_savings.sh</p>
+      </div>
+    </div>
+    <div class="social-links prompt">
+      <a href="https://www.linkedin.com/in/konathala/" target="_blank">linkedin.com</a>
+      <a href="https://x.com/your-x-username" target="_blank"></a>
+    </div>
+    <div class="prompt">
+      <a href="#contact" class="cta-button">./contact.sh</a>
+      <a href="#learn-more" class="cta-button">./learn_more.sh</a>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 konathala.com. All rights reserved.</p>
+  </footer>
+  <script>
+    // Simulate typing effect for header
+    const header = document.querySelector('h1');
+    const text = header.textContent;
+    header.textContent = '';
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        header.textContent += text[i];
+        i++;
+        setTimeout(type, 50);
+      }
+    }
+    type();
+
+    // Button click animation
+    document.querySelectorAll('.cta-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.style.backgroundColor = '#1a1a1a';
+        this.style.color = '#00ff00';
+        setTimeout(() => {
+          this.style.backgroundColor = '#00ff00';
+          this.style.color = '#1a1a1a';
+          if (this.href.includes('#contact')) {
+            alert('$ curl linkedin.com or x.com to connect!');
+          } else {
+            alert('$ ls /new_tools: coming soon!');
+          }
+        }, 200);
+      });
+    });
+  </script>
+</body>
+</html>
